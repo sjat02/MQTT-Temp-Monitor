@@ -1,3 +1,5 @@
+#subscribing the published temperature values 
+
 from paho.mqtt import client as mqtt
 import time
 

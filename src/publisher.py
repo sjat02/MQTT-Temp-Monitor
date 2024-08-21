@@ -1,3 +1,5 @@
+##Publishing the temperature values
+
 from paho.mqtt import client as mqtt
 import random
 import time

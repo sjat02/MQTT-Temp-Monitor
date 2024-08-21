@@ -32,12 +32,6 @@ client.connect(broker, port, 60)
 # Start the client loop in a separate thread
 client.loop_start()
 
-
-
-
-
-
-
 try:
     # Keep the script running to listen for messages
     while True:

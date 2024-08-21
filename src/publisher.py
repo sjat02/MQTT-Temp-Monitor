@@ -6,8 +6,8 @@ import time
 def on_connect(client, userdata, flags, rc):
     print(f"Connected with result code {rc}")
 
-def on_publish(client, userdata, mid):
-    print(f"Message published with ID: {mid}")
+# def on_publish(client, userdata, mid):
+#     print(f"Message published with ID: {mid}")
 
 # MQTT Broker settings
 broker = "test.mosquitto.org"  # Public MQTT broker for testing
@@ -19,7 +19,7 @@ client = mqtt.Client()
 
 # Assign the callback functions
 client.on_connect = on_connect
-client.on_publish = on_publish
+# client.on_publish = on_publish
 
 # Connect to the broker
 client.connect(broker, port, 60)
@@ -39,7 +39,7 @@ try:
         else:
             print("Failed to publish message")
         # Wait for 5 seconds before publishing the next value
-        time.sleep(1)
+        time.sleep(2)
 except KeyboardInterrupt:
     print("Interrupted by user")
 finally:

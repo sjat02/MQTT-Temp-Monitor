@@ -47,9 +47,10 @@ mqtt_thread.daemon = True
 mqtt_thread.start()
 
 # Streamlit App
+
 st.title("MQTT Data Stream")
 
-st.write("### Data from MQTT topic:")
+st.write("### Data from MQTT topic: sensor/temperature")
 
 # Create a placeholder for the chart
 chart_placeholder = st.empty()
@@ -66,7 +67,7 @@ while True:
             })
 
             # Display the latest values
-            st.write(f"Topic:sensor/temperature, Last Value: {data['sensor/temperature'][-1]}")
+            st.write(f"Topic: sensor/temperature, Last Value: {data['sensor/temperature'][-1]}")
             
             # Plot the data
             with chart_placeholder.container():
@@ -74,3 +75,5 @@ while True:
                 st.line_chart(df.set_index('Timestamp'))
 
     time.sleep(1)  # Update every second
+
+

@@ -75,5 +75,3 @@ while True:
                 st.line_chart(df.set_index('Timestamp'))
 
     time.sleep(1)  # Update every second
-
-

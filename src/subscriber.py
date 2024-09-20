@@ -44,6 +44,3 @@ finally:
     # Stop the client loop and disconnect from the broker
     client.loop_stop()
     client.disconnect()
-
-
-#am i in prague branch

@@ -1,4 +1,4 @@
-#subscribing the published temperature values 
+#subscribing the published temperature values and create app usign it
 
 from paho.mqtt import client as mqtt
 import time
@@ -45,5 +45,3 @@ finally:
     client.loop_stop()
     client.disconnect()
 
-
-    ##change in prague branch
